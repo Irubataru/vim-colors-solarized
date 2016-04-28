@@ -543,11 +543,13 @@ exe "hi! Comment"        .s:fmt_ital   .s:fg_base01 .s:bg_none
 
 exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
 "       *Constant        any constant
-"        String          a string constant: "this is a string"
 "        Character       a character constant: 'c', '\n'
 "        Number          a number constant: 234, 0xff
 "        Boolean         a boolean constant: TRUE, false
 "        Float           a floating point constant: 2.3e10
+
+exe "hi! String"         .s:fmt_none   .s:fg_orange .s:bg_none
+"        String          a string constant: "this is a string"
 
 exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
 "       *Identifier      any variable name
@@ -597,6 +599,14 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "                        keywords TODO FIXME and XXX
 "
 "}}}
+"
+" color_coded highlighting "{{{
+exe "hi! Member"         .s:fmt_none   .s:fg_violet .s:bg_none
+exe "hi! Variable"       .s:fmt_none   .s:fg_violet .s:bg_none
+exe "hi! Namespace"      .s:fmt_none   .s:fg_orange .s:bg_none
+exe "hi! EnumConstant"   .s:fmt_none   .s:fg_yellow .s:bg_none
+" }}}
+"
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
 if      (g:solarized_visibility=="high")
